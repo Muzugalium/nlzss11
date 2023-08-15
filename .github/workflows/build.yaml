@@ -48,14 +48,6 @@ jobs:
         name: wheelhouse
         path: wheelhouse
 
-  release-macos:
-    runs-on: [macos-latest]
-    strategy:
-      matrix:
-        python-version: ['3.8', '3.9']
-    env:
-      MACOSX_DEPLOYMENT_TARGET: "10.14"
-
     steps:
     - uses: actions/checkout@v2
     - run: git submodule update --init --recursive
